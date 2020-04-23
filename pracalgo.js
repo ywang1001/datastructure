@@ -50,14 +50,4 @@ let input = [[1,1,1,1,0],[1,1,0,1,0],[1,1,0,0,0],[0,0,0,0,0]];
 console.log(numIslands(input));*/
 
 let s = 'A man, a plan, a canal: Panama';
-let re = /\s*(?:;|$)\s*/;
-console.log(s.toLowerCase().split(re));
-let b = s.split(' ').join('');
-console.log(b);
-let c = b.split(',').join('');
-console.log(c);
-let d = c.split(':').join('');
-console.log(d);
-let e = d.toLowerCase();
-console.log(e);
-console.log(e.split('').reverse().join('') === e)
+

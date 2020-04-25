@@ -11,5 +11,5 @@ function fibo(n) {
    b = c;
 }
 
-fibo(6);
+fibo(7);
 console.log(c);

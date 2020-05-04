@@ -51,3 +51,20 @@ console.log(numIslands(input));*/
 
 let s = 'A man, a plan, a canal: Panama';
 
+/*let arr = [1,2,3,4,5,6];
+for(var i = 0; i < arr.length; ++i) {
+    (function(){
+        let j = i;
+        setTimeout(()=> {
+           console.log(j, arr[j]);
+        }, i*1000)
+    })(i)
+}
+
+function primeNumber(range) {
+    
+}*/
+
+for(let i = 0; i < 3; i++) {
+    setTimeout(()=>{console.log(i)}, 1000)
+}

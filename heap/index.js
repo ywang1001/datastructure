@@ -80,3 +80,32 @@ minHeap.pop();
 console.log(minHeap.peek());
 minHeap.insert(1);
 console.log(minHeap.peek());
+let ff = [];
+while(minHeap.length > 0) {
+    ff.push(minHeap.pop());
+}
+
+console.log('arr is, ', ff);
+
+function Node(val) {
+    this.val = val;
+    this.next = null;
+}
+
+var mergeKLists = function(lists) {
+    let mH = new MinHeap();
+    for(let i = 0; i < lists.length; ++i) {
+        mH.insert(lists[i]);
+    }
+    let dummy = new Node(0);
+    let cur = dummy;
+    while(mH.length > 0) {
+        let curN = mH.pop();
+        cur.next = curN;
+        cur = cur.next;
+        if(curN.next) {
+            mH.insert(curN.next);
+        } 
+    }
+    return dummy.next;
+}

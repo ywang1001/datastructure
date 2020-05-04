@@ -46,3 +46,4 @@ class Graph {
 }
 
 console.log(networkSums(5, [1,2,1,4],[2,3,3,5]));
+

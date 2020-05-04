@@ -23,3 +23,26 @@ Object.keys(obj).forEach(ele => {
     console.log(ele, obj[ele]);
 });
 
+
+function add(a) {
+    let sum = a
+     function add2(b){
+       sum += b;
+       return add2;
+     };
+     add2.toString = function(){
+         return sum;
+     }
+     return add2;
+ }
+ console.log(add(1)(2)(3)(4));
+
+ let obj1 = {
+     name: 'Hongwei Zhang',
+     sex: 'female',
+     age: 28
+ }
+
+ Object.keys(obj).forEach((ele) => {
+     console.log(ele, obj[ele]);
+ })

@@ -58,16 +58,6 @@ class Solution {
         helper(cur.right);
     }
     
-    public TreeNode findLast(TreeNode head) {
-        if(head == null) {
-            return head;
-        }
-        while(head != null && head.right != null) {
-            head = head.right;
-        }
-        return head;
-    }
-    
 }
 
 //Time: O(n), Space: O(1)

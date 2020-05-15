@@ -1,4 +1,4 @@
-function networkSums(cNodes, cFrom, cTo) {
+/*function networkSums(cNodes, cFrom, cTo) {
     let sum = cNodes * (cNodes + 1)/2;
     const res = [];
     const graph = new Graph(cNodes);
@@ -46,4 +46,76 @@ class Graph {
 }
 
 console.log(networkSums(5, [1,2,1,4],[2,3,3,5]));
+*/
 
+/*
+let a = [1,2,3,4];
+let b = []
+a.forEach(ele => {
+                 ele = ele*2;
+                 console.log(ele);
+                 b.push(ele);
+                });
+for(let i = 0; i < a.length; ++i) {
+    console.log(b[i]);
+}*/
+
+
+
+/*function Foo(){
+    getName = function(){
+        console.log(1)
+    }
+    return this;
+}
+Foo.getName = function(){
+    console.log(2)
+}
+Foo.prototype.getName = function(){
+    console.log(3)
+}
+var getName = function(){
+    console.log(4)
+}
+function getName(){
+    console.log(5)
+}
+// ouput:
+Foo.getName();  // 3   错成狗了
+getName();           //  4
+//Foo().getName();  //  1
+getName();      // 1
+new Foo.getName();   // 1 
+new Foo().getName();  // 1
+*/
+
+console.log(1)
+setTimeout(function() {
+  console.log(2)
+}, 0);
+const intervalId = setInterval(function() {
+  console.log(3)
+}, 0)
+setTimeout(function() {
+  console.log(10)
+  new Promise(function(resolve) {
+    console.log(11)
+    resolve()
+  })
+  .then(function() {
+    console.log(12)
+  })
+  .then(function() {
+    console.log(13)
+    clearInterval(intervalId)
+  })
+}, 0);
+
+Promise.resolve()
+  .then(function() {
+    console.log(7)
+  })
+  .then(function() {
+    console.log(8)
+  })
+console.log(9)

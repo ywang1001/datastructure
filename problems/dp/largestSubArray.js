@@ -18,3 +18,9 @@ function largestSubArray(arr) {
 
 let input = [-2,1,-3,4,-1,2,1,-5,4];
 console.log(largestSubArray(input));
+let arr = [3,2,1];
+let array = [-2,2,25,25,5,7,8];
+arr.sort();
+console.log(arr);
+array.sort();
+console.log(array);

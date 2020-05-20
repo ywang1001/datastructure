@@ -1,3 +1,5 @@
+
+
 function longestIncreasingPath(matrix) {
    if(!matrix) {
        return 0;
@@ -50,4 +52,41 @@ function flattenArray(input) {
 }
 
 let inp = [1,[2,3],4,5];
-console.log(flattenArray(inp))
+console.log(flattenArray(inp));
+
+function nintynineCent(nums, cents){
+    let res = [];
+    if(!nums || nums.length === 0) {
+        return res;
+    }
+    //nums.sort();
+    let tp = [];
+    dfs2(res, tp, 0, nums, cents);
+    return res;
+}
+
+const dfs2 = function(result, cur, index, nums, remain){
+       if(remain <= 0 || index === nums.length) {
+            if(remain === 0) {
+                result.push([...cur]);
+            }
+            return;
+       }
+
+       let count = remain/nums[index];
+       for(let i = 0; i <= count; ++i) {
+           cur.push(i);
+           remain = remain - i*nums[index];
+           dfs2(result, cur, index+1, nums, remain);
+           remain = remain + i*nums[index];
+           cur.pop();
+       }
+}
+
+let ar = [1,5,10];
+console.log('sb');
+let finalresult = nintynineCent(ar, 19);
+console.log(finalresult.length);
+for(let i = 0; i < finalresult.length; ++i) {
+    console.log(finalresult[i]);
+}

@@ -342,12 +342,9 @@ let max = new MaxHeap();
 for(let i = 0; i < 10; ++i) {
     max.offer(i);
 }
-/*console.log(max.peek());
-console.log(max.pop());
-console.log(max.peek());
-console.log(max.isEmpty());*/
 
-while(max.isEmpty() === false){
+
+while(!max.isEmpty()){
     let tp = max.pop();
     console.log(tp);
 }

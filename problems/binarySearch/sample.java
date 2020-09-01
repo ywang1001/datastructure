@@ -37,4 +37,8 @@ class Solution {
         }
         return nums[left] == target ? left : -1;
     }
+
+    public static void main(String[] args) {
+        System.out.println("SB");
+    }
 }

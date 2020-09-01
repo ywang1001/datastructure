@@ -17,9 +17,21 @@ Input: ")("
 Output: [""]
 * */
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 class Solution {
-    public List<String> removeInvalidParentheses(String s) {
-        if (s == null || s.length() == 0) {
+
+	public static void main(String[] args) {
+		String s = "sb";
+		System.out.println(s);
+	}
+
+	public List<String> removeInvalidParentheses(String s) {
+		if (s == null || s.length() == 0) {
 			return Arrays.asList("");
 		}
 
@@ -29,7 +41,7 @@ class Solution {
 		Set<String> resultSet = new HashSet<>();
 
 		/*
-		 * This loop find out how many left and right paranthesis are to be removed. 
+		 * This loop find out how many left and right paranthesis are to be removed.
 		 * Right will never be decremented
 		 */
 		for (char aChar : s.toCharArray()) {
@@ -92,5 +104,6 @@ class Solution {
 			helper(s, index + 1, open, close + 1, left, right, builder, resultSet);
 			builder.deleteCharAt(builder.length() - 1);
 		}
-    }
+	}
+
 }

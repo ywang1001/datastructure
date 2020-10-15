@@ -37,3 +37,27 @@ var findOrder = function(numCourses, prerequisites) {
 
 let prerequisites = [[1,0],[2,0],[3,1],[3,2]];
 console.log(findOrder(4,prerequisites));
+
+for(var i = 0; i < 4; ++i) {
+    (function(i) {
+        let j = i;
+        setTimeout(()=>{
+           console.log(j);
+        }, i*1000)
+    } )(i)
+}
+
+function add(a) {
+    let res = a;
+    function add2(b) {
+       res += b;
+       return add2;
+    }
+    add2.toString = () => {
+        return res;
+    }
+    return add2;
+}
+
+console.log(add(1)(2)(3)(4));
+
